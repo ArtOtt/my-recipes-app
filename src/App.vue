@@ -14,7 +14,9 @@ export default {
   },
 
   created() {
-    this.state.getAllRecipes()
+    if (this.state.recipes.length === 0) {
+      this.state.getAllRecipes()
+    }
   },
 }
 </script>
