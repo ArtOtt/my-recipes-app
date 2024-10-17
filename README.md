@@ -1,18 +1,15 @@
-# recipes
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+# Recipes App
 
 ## Project Setup
 
+### Klonen
 ```sh
+git clone git@github.com:coding-bootcamps-eu/project-tz-2024-05-recipes rezept-app
+```
+
+### App zum Laufen bringen
+```sh
+cd rezept-app
 npm install
 ```
 
