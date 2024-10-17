@@ -1,0 +1,302 @@
+{
+  "recipes": [
+    {
+      "id": "01234567-89ab-cdef-0123-456789abcdef",
+      "name": "Spaghetti Carbonara",
+      "description": "Eine klassische italienische Nudelgerichte mit Eier, Pecorino Romano und Guanciale.",
+      "img": "https://images.unsplash.com/photo-1588013273468-315fd88ea34c?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": true,
+      "ingredients": [
+        {
+          "name": "Spaghetti",
+          "quantity": "500g"
+        },
+        {
+          "name": "Guanciale",
+          "quantity": "150g"
+        },
+        {
+          "name": "Eier",
+          "quantity": "3"
+        },
+        {
+          "name": "Pecorino Romano",
+          "quantity": "100g"
+        },
+        {
+          "name": "Schwarzer Pfeffer",
+          "quantity": "nach Geschmack"
+        }
+      ]
+    },
+    {
+      "id": "f0f1f2f3-f4f5-f6f7-f8f9-fafbffcfefff",
+      "name": "Lasagne",
+      "description": "Ein italienisches Schichtgericht mit Nudelplatten, Fleischsauce, Béchamelsoße und Käse.",
+      "img": "https://images.unsplash.com/photo-1709429790175-b02bb1b19207?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": false,
+      "ingredients": [
+        {
+          "name": "Lasagneplatten",
+          "quantity": "12 Stück"
+        },
+        {
+          "name": "Hackfleisch",
+          "quantity": "500g"
+        },
+        {
+          "name": "Tomatensauce",
+          "quantity": "1 Liter"
+        },
+        {
+          "name": "Béchamelsoße",
+          "quantity": "500ml"
+        },
+        {
+          "name": "Mozzarella",
+          "quantity": "200g"
+        },
+        {
+          "name": "Parmesan",
+          "quantity": "50g"
+        }
+      ]
+    },
+    {
+      "id": "11111111-1111-1111-1111-111111111111",
+      "name": "Pizza Margherita",
+      "description": "Eine klassische italienische Pizza mit Tomatensoße, Mozzarella und Basilikum.",
+      "img": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": false,
+      "ingredients": [
+        {
+          "name": "Pizzateig",
+          "quantity": "1 Stück"
+        },
+        {
+          "name": "Tomatensauce",
+          "quantity": "100ml"
+        },
+        {
+          "name": "Mozzarella",
+          "quantity": "150g"
+        },
+        {
+          "name": "Basilikum",
+          "quantity": "nach Geschmack"
+        }
+      ]
+    },
+    {
+      "id": "22222222-2222-2222-2222-222222222222",
+      "name": "Ratatouille",
+      "description": "Ein französisches Gemüsegericht mit Aubergine, Zucchini, Paprika, Tomaten und Zwiebeln.",
+      "img": "https://plus.unsplash.com/premium_photo-1713635953474-b74990274152?q=80&w=1784&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": true,
+      "ingredients": [
+        {
+          "name": "Aubergine",
+          "quantity": "1 Stück"
+        },
+        {
+          "name": "Zucchini",
+          "quantity": "1 Stück"
+        },
+        {
+          "name": "Paprika",
+          "quantity": "1 Stück"
+        },
+        {
+          "name": "Tomaten",
+          "quantity": "2 Stück"
+        },
+        {
+          "name": "Zwiebeln",
+          "quantity": "1 Stück"
+        },
+        {
+          "name": "Olivenöl",
+          "quantity": "3 Esslöffel"
+        },
+        {
+          "name": "Kräuter der Provence",
+          "quantity": "1 Teelöffel"
+        }
+      ]
+    },
+    {
+      "id": "33333333-3333-3333-3333-333333333333",
+      "name": "Chili con Carne",
+      "description": "Ein mexikanisches Gericht mit Hackfleisch, Tomaten, Bohnen und Gewürzen.",
+      "img": "https://images.unsplash.com/photo-1666819632298-fe15dc7d4c34?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": false,
+      "ingredients": [
+        {
+          "name": "Hackfleisch",
+          "quantity": "500g"
+        },
+        {
+          "name": "Tomaten",
+          "quantity": "1 Dose"
+        },
+        {
+          "name": "Kidneybohnen",
+          "quantity": "1 Dose"
+        },
+        {
+          "name": "Chili Pulver",
+          "quantity": "1 Teelöffel"
+        },
+        {
+          "name": "Koriander",
+          "quantity": "1 Teelöffel"
+        },
+        {
+          "name": "Cumin",
+          "quantity": "1 Teelöffel"
+        }
+      ]
+    },
+    {
+      "id": "44444444-4444-4444-4444-444444444444",
+      "name": "Currywurst",
+      "description": "Ein deutsches Gericht mit Currywurst und Pommes Frites.",
+      "img": "https://images.unsplash.com/photo-1561701034-24ceb3e34433?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": true,
+      "ingredients": [
+        {
+          "name": "Currywurst",
+          "quantity": "4 Stück"
+        },
+        {
+          "name": "Pommes Frites",
+          "quantity": "2 Portionen"
+        },
+        {
+          "name": "Currysauce",
+          "quantity": "200ml"
+        }
+      ]
+    },
+    {
+      "id": "55555555-5555-5555-5555-555555555555",
+      "name": "Schnitzel",
+      "description": "Ein deutsches Gericht mit paniertem Fleisch.",
+      "img": "https://images.unsplash.com/photo-1560611588-163f295eb145?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": false,
+      "ingredients": [
+        {
+          "name": "Schnitzel",
+          "quantity": "2 Stück"
+        },
+        {
+          "name": "Paniermehl",
+          "quantity": "100g"
+        },
+        {
+          "name": "Eier",
+          "quantity": "2"
+        },
+        {
+          "name": "Mehl",
+          "quantity": "100g"
+        },
+        {
+          "name": "Pflanzenöl",
+          "quantity": "2 Esslöffel"
+        }
+      ]
+    },
+    {
+      "id": "66666666-6666-6666-6666-666666666666",
+      "name": "Spaghetti Bolognese",
+      "description": "Ein italienisches Nudelgericht mit Hackfleischsauce.",
+      "img": "https://images.unsplash.com/photo-1665390062148-532302d18eb4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": true,
+      "ingredients": [
+        {
+          "name": "Spaghetti",
+          "quantity": "500g"
+        },
+        {
+          "name": "Hackfleisch",
+          "quantity": "500g"
+        },
+        {
+          "name": "Tomatensauce",
+          "quantity": "1 Liter"
+        },
+        {
+          "name": "Zwiebeln",
+          "quantity": "1 Stück"
+        },
+        {
+          "name": "Karotten",
+          "quantity": "1 Stück"
+        },
+        {
+          "name": "Sellerie",
+          "quantity": "1 Stück"
+        },
+        {
+          "name": "Weißwein",
+          "quantity": "100ml"
+        }
+      ]
+    },
+    {
+      "id": "77777777-7777-7777-7777-777777777777",
+      "name": "Käsefondue",
+      "description": "Ein Schweizer Gericht mit geschmolzenem Käse.",
+      "img": "https://images.unsplash.com/photo-1512594282804-b5f400408c9d?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": false,
+      "ingredients": [
+        {
+          "name": "Käse",
+          "quantity": "500g"
+        },
+        {
+          "name": "Wein",
+          "quantity": "200ml"
+        },
+        {
+          "name": "Knoblauch",
+          "quantity": "1 Zehe"
+        },
+        {
+          "name": "Maizena",
+          "quantity": "1 Teelöffel"
+        }
+      ]
+    },
+    {
+      "id": "88888888-8888-8888-8888-888888888888",
+      "name": "Sushi",
+      "description": "Ein japanisches Gericht mit Reis und Fisch.",
+      "img": "https://images.unsplash.com/photo-1607247098731-5bf6416d2e8c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isFavorite": false,
+      "ingredients": [
+        {
+          "name": "Sushireis",
+          "quantity": "2 Tassen"
+        },
+        {
+          "name": "Sushi-Essig",
+          "quantity": "3 Esslöffel"
+        },
+        {
+          "name": "Lachs",
+          "quantity": "150g"
+        },
+        {
+          "name": "Avocado",
+          "quantity": "1 Stück"
+        },
+        {
+          "name": "Nori-Blätter",
+          "quantity": "10 Stück"
+        }
+      ]
+    }
+  ]
+}
