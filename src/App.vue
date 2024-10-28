@@ -1,21 +1,27 @@
 <template>
-  <h1>Rezept-App</h1>
-  <RouterView />
+  <MainHeader />
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <script>
-import { useRecipesStore } from '@/stores/recipes.js'
+import MainHeader from '@/components/MainHeader.vue'
+import { useRecipesStore } from '@/stores/recipes'
 
 export default {
+  components: {
+    MainHeader,
+  },
   data() {
     return {
       state: useRecipesStore(),
     }
   },
 
-  created() {
+  async created() {
     if (this.state.recipes.length === 0) {
-      this.state.getAllRecipes()
+      await this.state.getAllRecipes()
     }
   },
 }
