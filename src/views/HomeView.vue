@@ -1,7 +1,13 @@
 <template>
-  <h2>Home</h2>
+  <PageHeader title="Startseite" />
 </template>
 
 <script>
-export default {}
+import PageHeader from '@/components/PageHeader.vue'
+
+export default {
+  components: {
+    PageHeader,
+  },
+}
 </script>
