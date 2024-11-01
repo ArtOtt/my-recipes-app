@@ -4,6 +4,9 @@
     <h3>{{ recipe.name }}</h3>
     <img :src="recipe.img" alt="" style="width: 200px" />
     <p>{{ recipe.description }}</p>
+    <router-link :to="{ name: 'recipe', params: { id: recipe.id } }"
+      >Zum Rezept</router-link
+    >
   </div>
 </template>
 
@@ -34,6 +37,14 @@ h3 {
   padding-block: 0.5rem;
 }
 p {
-  padding-top: 0.5rem;
+  padding-block: 0.5rem;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.3rem;
+}
+a {
+  color:;
 }
 </style>
