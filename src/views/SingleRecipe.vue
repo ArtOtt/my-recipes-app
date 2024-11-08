@@ -1,8 +1,13 @@
 <template>
   <PageHeader :title="currentRecipe.name" :sub="currentRecipe.description" />
-  <article>
-    <img :src="currentRecipe.img" alt="" style="width: 400px" />
-    <h3>Zutaten:</h3>
+  <article class="py-5">
+    <img
+      class="rounded pb-4"
+      :src="currentRecipe.img"
+      alt=""
+      style="width: 400px"
+    />
+    <h3 class="pb-2">Zutaten:</h3>
     <li v-for="item in currentRecipe.ingredients" :key="item">
       <strong>{{ item.name + ': ' }}</strong>
       {{ item.quantity }}
@@ -36,15 +41,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-article {
-  padding-block: 1rem;
-}
-h3 {
-  padding-block: 1rem;
-}
-li {
-  padding-block: 0.3rem;
-}
-</style>
