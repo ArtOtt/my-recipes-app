@@ -1,12 +1,21 @@
 <template>
   <PageHeader title="Rezeptübersicht" sub="Suche dir dein Rezept raus! " />
-  <div v-for="recipe of state.recipes" :key="recipe.id">
-    <h3>{{ recipe.name }}</h3>
-    <img :src="recipe.img" alt="" style="width: 200px" />
-    <p>{{ recipe.description }}</p>
-    <router-link :to="{ name: 'recipe', params: { id: recipe.id } }"
-      >Zum Rezept</router-link
-    >
+  <div
+    class="my-10 border-1 bg-gray-100 rounded-xl shadow-lg hover:shadow-amber-200"
+    v-for="recipe of state.recipes"
+    :key="recipe.id"
+  >
+    <div class="p-5">
+      <h3 class="text-xl mb-3 underline">{{ recipe.name }}</h3>
+      <img class="mb-3 rounded max-h-32" :src="recipe.img" alt="" />
+      <p class="mb-3">{{ recipe.description }}</p>
+      <router-link
+        class="text-blue-900 underline"
+        :to="{ name: 'recipe', params: { id: recipe.id } }"
+      >
+        Zum Rezept</router-link
+      >
+    </div>
   </div>
 </template>
 
@@ -25,26 +34,7 @@ export default {
 
   async created() {
     await this.state.getAllRecipes()
+    console.log(this.recipes)
   },
 }
 </script>
-
-<style scoped>
-div {
-  padding-block: 1rem;
-}
-h3 {
-  padding-block: 0.5rem;
-}
-p {
-  padding-block: 0.5rem;
-}
-
-button {
-  margin-top: 0.5rem;
-  padding: 0.3rem;
-}
-a {
-  color:;
-}
-</style>
