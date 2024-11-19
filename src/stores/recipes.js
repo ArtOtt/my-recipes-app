@@ -11,8 +11,7 @@ export const useRecipesStore = defineStore('recipes', {
   actions: {
     async getAllRecipes() {
       const res = await fetch(this.apiURl)
-      const data = await res.json()
-      this.recipes = data.recipes
+      this.recipes = await res.json()
     },
   },
 })
