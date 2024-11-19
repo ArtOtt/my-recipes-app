@@ -34,7 +34,6 @@ export default {
 
   async created() {
     await this.state.getAllRecipes()
-    console.log(this.recipes)
   },
 }
 </script>
