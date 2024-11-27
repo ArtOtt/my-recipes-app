@@ -8,10 +8,12 @@
       style="width: 400px"
     />
     <h3 class="pb-2">Zutaten:</h3>
-    <li v-for="item in currentRecipe.ingredients" :key="item">
-      <strong>{{ item.name + ': ' }}</strong>
-      {{ item.quantity }}
-    </li>
+    <ul>
+      <li v-for="item in currentRecipe.ingredients" :key="item.name">
+        <strong>{{ item.name + ': ' }}</strong>
+        {{ item.quantity }}
+      </li>
+    </ul>
   </article>
 </template>
 
@@ -26,10 +28,6 @@ export default {
       recipeId: this.$route.params.id,
       state: useRecipesStore(),
     }
-  },
-
-  created() {
-    console.log(this.recipeId)
   },
 
   computed: {
