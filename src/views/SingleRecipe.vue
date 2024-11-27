@@ -15,6 +15,17 @@
       </li>
     </ul>
   </article>
+  <!-- Neuer Button -->
+  <button
+    @click="toggleFavorite"
+    class="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+  >
+    {{
+      currentRecipe.isFavorite
+        ? 'Als Favorit entfernen'
+        : 'Zu Favoriten hinzufügen'
+    }}
+  </button>
 </template>
 
 <script>
@@ -35,6 +46,13 @@ export default {
       return this.state.recipes.find(
         singleRecipe => singleRecipe.id === this.recipeId,
       )
+    },
+  },
+  methods: {
+    toggleFavorite() {
+      if (this.currentRecipe) {
+        this.currentRecipe.isFavorite = !this.currentRecipe.isFavorite
+      }
     },
   },
 }
