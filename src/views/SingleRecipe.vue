@@ -49,9 +49,21 @@ export default {
     },
   },
   methods: {
-    toggleFavorite() {
+    async toggleFavorite() {
       if (this.currentRecipe) {
         this.currentRecipe.isFavorite = !this.currentRecipe.isFavorite
+
+        const response = await fetch(
+          `http://localhost:3010/recipes/${this.currentRecipe.id}`,
+          {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(this.currentRecipe),
+          },
+        )
+
+        const updatedTodoFromApi = await response.json()
+        console.log(updatedTodoFromApi)
       }
     },
   },
