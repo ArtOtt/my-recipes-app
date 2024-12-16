@@ -1,6 +1,6 @@
 <template>
-  <PageHeader title="Startseite" sub="Finde deine Kategorie" />
   <div class="p-6">
+    <PageHeader class="mt-10" title="Startseite" sub="Finde deine Kategorie" />
     <ul class="space-y-2">
       <li
         v-for="category in state.categories"
@@ -12,11 +12,18 @@
         }}</router-link>
       </li>
     </ul>
+    <PageHeader class="mt-10" title="Deine Favoriten" sub="" />
+    <recipe-teaser
+      v-for="recipe of state.recipes.filter(recipe => recipe.isFavorite)"
+      :key="recipe.id"
+      :recipe="recipe"
+    />
   </div>
 </template>
 
 <script>
 import PageHeader from '@/components/PageHeader.vue'
+import RecipeTeaser from '@/components/RecipeTeaser.vue'
 import { useRecipesStore } from '@/stores/recipes'
 
 export default {
@@ -25,8 +32,14 @@ export default {
       state: useRecipesStore(),
     }
   },
+  computed: {
+    favoriteRecipes() {
+      return this.state.recipes.filter(recipe => recipe.isFavorit)
+    },
+  },
   components: {
     PageHeader,
+    RecipeTeaser,
   },
   async created() {
     await this.state.getAllRecipes()
