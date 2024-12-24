@@ -23,9 +23,12 @@ export const useRecipesStore = defineStore('recipes', {
       })
       if (loggedInUser) {
         this.user = loggedInUser
+        localStorage.setItem('user', JSON.stringify(loggedInUser))
       }
     },
-
+    checkLoggin() {
+      this.user = JSON.parse(localStorage.getItem('user'))
+    },
     async getAllRecipes() {
       const res = await fetch(this.apiURl + 'recipes')
       this.recipes = await res.json()

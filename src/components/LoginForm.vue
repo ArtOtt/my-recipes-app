@@ -1,5 +1,9 @@
 <template>
-  <form class="flex flex-col gap-2" @submit.prevent="Login">
+  <form
+    class="flex flex-col gap-2"
+    @submit.prevent="Login"
+    v-if="state.user === null"
+  >
     <div class="flex flex-col-reverse justify-end gap-2">
       <input
         type="text"
@@ -28,6 +32,12 @@
       Einloggen
     </button>
   </form>
+  <button
+    v-else
+    class="self-start my-2 px-6 py-2 bg-sky-500 text-white rounded hover:bg-sky-600"
+  >
+    Ausloggen
+  </button>
   <p
     class="bg-green-200 border-2 border-green-400 p-2 rounded"
     v-if="isLoggedIn"
@@ -71,6 +81,11 @@ export default {
           'Login fehlgeschlagen. Bitte überprüfe deine Eingaben.'
       }
     },
+  },
+
+  created() {
+    this.state.checkLoggin()
+    console.log(this.state.user)
   },
 }
 </script>
