@@ -13,24 +13,24 @@ Abschlussprojekt, um das Wissen aus dem Coding Bootcamp umzusetzen.
 
 ## Project Setup
 
-### 1.API starten 
+### Schritt 1.  API starten 
 Folge den Anweisungen im folgenden Repository und komme danach wieder hierher zurück. 
 ```sh
 https://github.com/coding-bootcamps-eu/project-tz-2024-05-recipes-api
 ```
 
-### 2.Klonen
+### Schritt 2. Klonen
 ```sh
 git clone git@github.com:coding-bootcamps-eu/project-tz-2024-05-recipes rezept-app
 ```
 
-### 3.App zum Laufen bringen
+### Schritt 3. App zum Laufen bringen
 ```sh
 cd rezept-app
 npm install
 ```
 
-### 4.Compile and Hot-Reload for Development
+### Schritt 4. Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
