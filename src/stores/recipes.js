@@ -4,11 +4,16 @@ export const useRecipesStore = defineStore('recipes', {
   state() {
     return {
       user: null,
-      users: [],
+
       categories: null,
       recipes: [],
       apiURl: import.meta.env.VITE_API_URL,
     }
+  },
+  getters: {
+    isLoggedIn() {
+      return this.user !== null
+    },
   },
 
   actions: {
@@ -36,6 +41,10 @@ export const useRecipesStore = defineStore('recipes', {
     async getAllCategories() {
       const res = await fetch(this.apiURl + 'categories')
       this.categories = await res.json()
+    },
+    logout() {
+      this.user = null
+      localStorage.setItem('user', null)
     },
   },
 })

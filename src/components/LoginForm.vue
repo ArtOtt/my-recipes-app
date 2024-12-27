@@ -35,6 +35,7 @@
   <button
     v-else
     class="self-start my-2 px-6 py-2 bg-sky-500 text-white rounded hover:bg-sky-600"
+    @click="state.logout"
   >
     Ausloggen
   </button>
