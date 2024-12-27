@@ -8,7 +8,7 @@ Abschlussprojekt, um das Wissen aus dem Coding Bootcamp umzusetzen.
 - Favoriten markieren
 - Favoriten anzeigen 
 - Nach Kategorien filtern  
-- Login (in Bearbeitung)
+- Login 
 - Rezepte hinzufügen (folgt noch)  
 
 ## Project Setup
