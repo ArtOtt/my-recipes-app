@@ -24,18 +24,30 @@ https://github.com/coding-bootcamps-eu/project-tz-2024-05-recipes-api
 git clone git@github.com:coding-bootcamps-eu/project-tz-2024-05-recipes rezept-app
 ```
 
-### Schritt 3. App zum Laufen bringen
+### Schritt 3. Abhängigkeiten installieren
 ```sh
 cd rezept-app
 npm install
 ```
+### Schritt 4. Erstelle die `.env`-Datei:
 
-### Schritt 4. Compile and Hot-Reload for Development
+Im Projekt-Ordner folgende .env Datei erstellen
+
+```sh
+touch .env
+```
+### Schritt 5. Kopiere den Inhalt in die .env Datei: 
+
+```sh
+VITE_API_URL=http://localhost:3010/
+```
+### Schritt 6. Starte die App in der Enwicklungsumgebung
 
 ```sh
 npm run dev
 ```
-
+------------------------------------
+------------------------------------
 ### Compile and Minify for Production
 
 ```sh
