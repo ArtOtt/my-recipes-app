@@ -1,6 +1,6 @@
 <template>
   <header class="bg-sky-900 text-white flex justify-between items-baseline p-4">
-    <h1 class="text-2xl">Das Kochbuch</h1>
+    <h1 class="text-2xl">Rezepte-App</h1>
     <nav>
       <ul class="flex gap-8">
         <li v-if="state.user">
@@ -9,13 +9,16 @@
         <li v-if="state.user">
           <router-link :to="{ name: 'recipes' }">Rezepte</router-link>
         </li>
+        <li v-if="state.user">
+          <router-link :to="{ name: 'addRecipes' }"
+            >Rezepte hinzufügen</router-link
+          >
+        </li>
         <li v-else>
           <router-link :to="{ name: 'login' }">Login</router-link>
         </li>
         <li v-if="state.user">
-          <router-link :to="{ name: 'home' }" @click.prevent="handleLogout"
-            >Ausloggen</router-link
-          >
+          <router-link :to="{ name: 'login' }">Ausloggen</router-link>
         </li>
       </ul>
     </nav>
