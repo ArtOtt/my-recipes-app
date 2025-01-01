@@ -5,6 +5,7 @@ import SingleRecipe from '@/views/SingleRecipe.vue'
 import CategoryView from '@/views/CategoryView.vue'
 import LoginView from '@/views/LoginView.vue'
 import { useRecipesStore } from '@/stores/recipes'
+import AddRecipesView from '@/views/AddRecipesView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +41,14 @@ const router = createRouter({
         public: false,
       },
       component: SingleRecipe,
+    },
+    {
+      path: '/addRecipes',
+      name: 'addRecipes',
+      meta: {
+        public: false,
+      },
+      component: AddRecipesView,
     },
     {
       path: '/login',
