@@ -9,7 +9,8 @@ This is the final project to apply the knowledge gained from the Coding Bootcamp
 - Show favorite recipes
 - Filter by categories
 - Login
-- Add recipes (coming soon)  
+- Add recipes
+- ...  
 
 ## Project Setup
 
