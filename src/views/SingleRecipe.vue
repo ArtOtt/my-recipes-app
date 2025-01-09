@@ -15,7 +15,7 @@
       </li>
     </ul>
   </article>
-  <!-- Neuer Button -->
+
   <button
     @click="toggleFavorite"
     class="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
