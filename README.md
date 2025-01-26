@@ -23,7 +23,7 @@ https://github.com/coding-bootcamps-eu/project-tz-2024-05-recipes-api
 ### Step 2. Clone the repository  
 Run the following command to clone the repository:  
 ```sh
-git clone git@github.com:coding-bootcamps-eu/project-tz-2024-05-recipes rezept-app
+git clone git@github.com:coding-bootcamps-eu/recipes-app recipes-app
 ```
 
 ### Step 3. Install dependencies  
