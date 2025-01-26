@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  border: solid 2px red;
+  @apply text-3xl font-bold; /* tailwind */
+}
