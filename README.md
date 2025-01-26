@@ -1,76 +1,75 @@
-# Recipes App 
+# Nuxt Minimal Starter
 
-This is the final project to apply the knowledge gained from the Coding Bootcamp.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Features
+## Setup
 
-- Display recipes
-- Mark favorites
-- Show favorite recipes
-- Filter by categories
-- Login
-- Add recipes
-- ...  
+Make sure to install dependencies:
 
-## Project Setup
-
-### Step 1. Start the API  
-Follow the instructions in the following repository, and then return here afterward.  
-```sh
-https://github.com/coding-bootcamps-eu/project-tz-2024-05-recipes-api
-```
-
-### Step 2. Clone the repository  
-Run the following command to clone the repository:  
-```sh
-git clone git@github.com:coding-bootcamps-eu/recipes-app recipes-app
-```
-
-### Step 3. Install dependencies  
-Navigate to the project folder and install the dependencies: 
-```sh
-cd rezept-app
+```bash
+# npm
 npm install
-```
-### Step 4. Create the `.env` file  
-Create a new `.env` file in the project folder by running:
 
-```sh
-touch .env
-```
-### Step 5. Add the following content to the `.env` file: 
+# pnpm
+pnpm install
 
-```sh
-VITE_API_URL=http://localhost:3010/
-```
-### Step 6. Start the app in development mode  
-Run the following command to start the app in development mode:  
+# yarn
+yarn install
 
-```sh
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
 npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
-### Step 7. Log in with the following username and password: 
-Username: 
 
-```sh
-Antonette
-```
-Password:
-```sh
-test
-```
+## Production
 
+Build the application for production:
 
-------------------------------------
-------------------------------------
-### Compile and Minify for Production
-
-```sh
+```bash
+# npm
 npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+Locally preview production build:
 
-```sh
-npm run lint
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
 ```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
