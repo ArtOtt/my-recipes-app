@@ -49,7 +49,8 @@ Run the following command to start the app in development mode:
 ```sh
 npm run dev
 ```
-### Step 7. Log in with the following username and password: 
+### Step 7. (Optional to add recipes)
+Log in with the following username and password: 
 Username: 
 
 ```sh
