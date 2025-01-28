@@ -127,63 +127,69 @@ export default {
   data() {
     return {
       categories: [
-        { id: '28493710', title: 'Asiatisch' },
-        { id: '61740283', title: 'Europäisch' },
-        { id: '50392176', title: 'Orientalisch' },
-        { id: '65012247', title: 'Andere Küchen' },
+        { id: "28493710", title: "Asiatisch" },
+        { id: "61740283", title: "Europäisch" },
+        { id: "50392176", title: "Orientalisch" },
+        { id: "65012247", title: "Andere Küchen" },
       ],
       recipe: {
         id: Date.now().toString(),
-        name: '',
-        categoryId: '',
-        description: '',
-        img: '',
+        name: "",
+        categoryId: "",
+        description: "",
+        img: "",
         isFavorite: false,
         ingredients: [],
       },
-    }
+    };
   },
   methods: {
     addIngredient() {
-      this.recipe.ingredients.push({ name: '', quantity: '' })
+      this.recipe.ingredients.push({ name: "", quantity: "" });
     },
     removeIngredient(index) {
-      this.recipe.ingredients.splice(index, 1)
+      this.recipe.ingredients.splice(index, 1);
     },
     async addRecipe() {
       try {
-        const apiUrl = 'https://example.com/api/recipes'
+        const apiUrl = "https://example.com/api/recipes";
         const response = await fetch(apiUrl, {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(this.recipe),
-        })
+        });
 
         if (!response.ok) {
-          throw new Error(`Fehler beim Hinzufügen: ${response.statusText}`)
+          throw new Error(`Fehler beim Hinzufügen: ${response.statusText}`);
         }
 
-        const result = await response.json()
-        alert('Rezept erfolgreich hinzugefügt!')
-        this.resetForm()
+        const result = await response.json();
+        alert("Rezept erfolgreich hinzugefügt!");
+        this.resetForm();
       } catch (error) {
-        console.error('Fehler:', error)
-        alert('Das Rezept konnte nicht hinzugefügt werden.')
+        console.error("Fehler:", error);
+        alert("Das Rezept konnte nicht hinzugefügt werden.");
       }
     },
     resetForm() {
       this.recipe = {
         id: Date.now().toString(),
-        name: '',
-        categoryId: '',
-        description: '',
-        img: '',
+        name: "",
+        categoryId: "",
+        description: "",
+        img: "",
         isFavorite: false,
         ingredients: [],
-      }
+      };
     },
   },
-}
+};
+</script>
+
+<script setup>
+definePageMeta({
+  middleware: ["auth"],
+});
 </script>

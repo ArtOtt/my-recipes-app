@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import RecipeTeaser from '@/components/RecipeTeaser.vue'
-import { useRecipesStore } from '@/stores/recipes'
+import RecipeTeaser from "@/components/RecipeTeaser.vue";
+import { useRecipesStore } from "@/stores/recipes";
 
 export default {
   data() {
@@ -18,12 +18,12 @@ export default {
       recipesFromCategory: {},
       recipeId: this.$route.params.id,
       state: useRecipesStore(),
-    }
+    };
   },
 
   computed: {
     categoryId() {
-      return this.$route.params.id
+      return this.$route.params.id;
     },
   },
 
@@ -31,16 +31,16 @@ export default {
     async getAllCategoryRecipes() {
       const res = await fetch(
         import.meta.env.VITE_API_URL +
-          `categories/${this.categoryId}?_embed=recipes`,
-      )
-      this.recipesFromCategory = await res.json()
+          `categories/${this.categoryId}?_embed=recipes`
+      );
+      this.recipesFromCategory = await res.json();
     },
   },
   async created() {
-    await this.getAllCategoryRecipes()
-    console.log(this.recipesFromCategory)
+    await this.getAllCategoryRecipes();
+    console.log(this.recipesFromCategory);
   },
 
   components: { RecipeTeaser },
-}
+};
 </script>

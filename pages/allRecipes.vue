@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import PageHeader from '@/components/PageHeader.vue'
-import RecipeTeaser from '@/components/RecipeTeaser.vue'
-import { useRecipesStore } from '@/stores/recipes'
+import PageHeader from "@/components/PageHeader.vue";
+import RecipeTeaser from "@/components/RecipeTeaser.vue";
+import { useRecipesStore } from "@/stores/recipes";
 
 export default {
   components: { PageHeader, RecipeTeaser },
@@ -18,11 +18,11 @@ export default {
   data() {
     return {
       state: useRecipesStore(),
-    }
+    };
   },
 
   async created() {
-    await this.state.getAllRecipes()
+    await this.state.getAllRecipes();
   },
-}
+};
 </script>

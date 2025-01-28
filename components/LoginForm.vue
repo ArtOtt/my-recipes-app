@@ -51,42 +51,42 @@
 </template>
 
 <script>
-import { useRecipesStore } from '@/stores/recipes'
+import { useRecipesStore } from "@/stores/recipes";
 
 export default {
   data() {
     return {
       state: useRecipesStore(),
-      username: '',
-      password: '',
-      errorMessage: '',
-    }
+      username: "",
+      password: "",
+      errorMessage: "",
+    };
   },
   computed: {
     isLoggedIn() {
-      return this.state.user !== null
+      return this.state.user !== null;
     },
   },
   methods: {
     async Login() {
       if (!this.username || !this.password) {
-        this.errorMessage = 'Benutzername und Passwort dürfen nicht leer sein!'
-        return
+        this.errorMessage = "Benutzername und Passwort dürfen nicht leer sein!";
+        return;
       }
 
       try {
-        await this.state.Login(this.username, this.password)
-        this.errorMessage = '' // Fehlernachricht zurücksetzen
+        await this.state.Login(this.username, this.password);
+        this.errorMessage = ""; // Fehlernachricht zurücksetzen
       } catch (error) {
         this.errorMessage =
-          'Login fehlgeschlagen. Bitte überprüfe deine Eingaben.'
+          "Login fehlgeschlagen. Bitte überprüfe deine Eingaben.";
       }
     },
   },
 
-  created() {
-    this.state.checkLoggin()
-    console.log(this.state.user)
+  mounted() {
+    this.state.checkLoggin();
+    console.log(this.state.user);
   },
-}
+};
 </script>

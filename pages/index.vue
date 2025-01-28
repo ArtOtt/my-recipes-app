@@ -3,8 +3,8 @@
     <PageHeader class="mt-10" title="Startseite" sub="Finde deine Kategorie" />
     <ul class="space-y-2 m-4 w-max-50">
       <li v-for="category in state.categories" :key="category.id" class="">
-        <router-link
-          :to="{ name: 'category', params: { id: category.id } }"
+        <NuxtLink
+          :to="`category/${category.id}`"
           class="px-4 py-2 bg-[#C2A83E] text-black rounded-lg w-[180px] shadow-md hover:bg-blue-500 transition duration-300 flex items-center gap-1"
         >
           <svg
@@ -23,12 +23,12 @@
           </svg>
 
           {{ category.title }}
-        </router-link>
+        </NuxtLink>
       </li>
     </ul>
     <PageHeader class="mt-10" title="Deine Favoriten" sub="" />
     <recipe-teaser
-      v-for="recipe of state.recipes.filter(recipe => recipe.isFavorite)"
+      v-for="recipe of state.recipes.filter((recipe) => recipe.isFavorite)"
       :key="recipe.id"
       :recipe="recipe"
     />
@@ -36,19 +36,19 @@
 </template>
 
 <script>
-import PageHeader from '@/components/PageHeader.vue'
-import RecipeTeaser from '@/components/RecipeTeaser.vue'
-import { useRecipesStore } from '@/stores/recipes'
+import PageHeader from "@/components/PageHeader.vue";
+import RecipeTeaser from "@/components/RecipeTeaser.vue";
+import { useRecipesStore } from "@/stores/recipes";
 
 export default {
   data() {
     return {
       state: useRecipesStore(),
-    }
+    };
   },
   computed: {
     favoriteRecipes() {
-      return this.state.recipes.filter(recipe => recipe.isFavorit)
+      return this.state.recipes.filter((recipe) => recipe.isFavorit);
     },
   },
   components: {
@@ -56,8 +56,8 @@ export default {
     RecipeTeaser,
   },
   async created() {
-    await this.state.getAllRecipes()
-    await this.state.getAllCategories()
+    await this.state.getAllRecipes();
+    await this.state.getAllCategories();
   },
-}
+};
 </script>

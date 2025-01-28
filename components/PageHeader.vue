@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  props: ['title', 'sub'],
-}
+  props: ["title", "sub"],
+};
 </script>

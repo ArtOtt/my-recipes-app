@@ -10,7 +10,7 @@
     <h3 class="pb-2">Zutaten:</h3>
     <ul>
       <li v-for="item in currentRecipe.ingredients" :key="item.name">
-        <strong>{{ item.name + ': ' }}</strong>
+        <strong>{{ item.name + ": " }}</strong>
         {{ item.quantity }}
       </li>
     </ul>
@@ -22,15 +22,15 @@
   >
     {{
       currentRecipe.isFavorite
-        ? 'Als Favorit entfernen'
-        : 'Zu Favoriten hinzufügen'
+        ? "Als Favorit entfernen"
+        : "Zu Favoriten hinzufügen"
     }}
   </button>
 </template>
 
 <script>
-import { useRecipesStore } from '@/stores/recipes'
-import PageHeader from '@/components/PageHeader.vue'
+import { useRecipesStore } from "@/stores/recipes";
+import PageHeader from "@/components/PageHeader.vue";
 
 export default {
   components: { PageHeader },
@@ -38,34 +38,34 @@ export default {
     return {
       recipeId: this.$route.params.id,
       state: useRecipesStore(),
-    }
+    };
   },
 
   computed: {
     currentRecipe() {
       return this.state.recipes.find(
-        singleRecipe => singleRecipe.id === this.recipeId,
-      )
+        (singleRecipe) => singleRecipe.id === this.recipeId
+      );
     },
   },
   methods: {
     async toggleFavorite() {
       if (this.currentRecipe) {
-        this.currentRecipe.isFavorite = !this.currentRecipe.isFavorite
+        this.currentRecipe.isFavorite = !this.currentRecipe.isFavorite;
 
         const response = await fetch(
           `http://localhost:3010/recipes/${this.currentRecipe.id}`,
           {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(this.currentRecipe),
-          },
-        )
+          }
+        );
 
-        const updatedTodoFromApi = await response.json()
-        console.log(updatedTodoFromApi)
+        const updatedTodoFromApi = await response.json();
+        console.log(updatedTodoFromApi);
       }
     },
   },
-}
+};
 </script>

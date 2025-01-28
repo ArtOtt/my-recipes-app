@@ -6,11 +6,11 @@
       <h3 class="text-xl mb-3 underline">{{ recipe.name }}</h3>
       <img class="mb-3 rounded max-h-32" :src="recipe.img" alt="" />
       <p class="mb-3">{{ recipe.description }}</p>
-      <router-link
+      <NuxtLink
         class="text-blue-900 underline"
-        :to="{ name: 'recipe', params: { id: recipe.id } }"
+        :to="`singleRecipe/${recipe.id}`"
       >
-        Zum Rezept</router-link
+        Zum Rezept</NuxtLink
       >
     </div>
   </article>
@@ -19,10 +19,10 @@
 <script>
 export default {
   data() {
-    return {}
+    return {};
   },
   props: {
     recipe: Object,
   },
-}
+};
 </script>
