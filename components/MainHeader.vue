@@ -7,12 +7,12 @@
     </h1>
     <nav>
       <ul class="flex gap-8">
-        <li v-if="state.user">
+        <li>
           <NuxtLink class="hidden sm:inline" :to="{ name: 'index' }"
             >Startseite</NuxtLink
           >
         </li>
-        <li v-if="state.user">
+        <li>
           <NuxtLink class="size-6 hidden sm:inline" :to="{ name: 'allRecipes' }"
             >Rezepte</NuxtLink
           >

@@ -84,7 +84,7 @@ export default {
     },
   },
 
-  created() {
+  mounted() {
     this.state.checkLoggin();
     console.log(this.state.user);
   },
