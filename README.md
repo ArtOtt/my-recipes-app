@@ -25,7 +25,7 @@ git clone git@github.com:coding-bootcamps-eu/recipes-app recipes-app
 ### Step 2. Install dependencies  
 Navigate to the project folder and install the dependencies: 
 ```sh
-cd rezept-app
+cd recipes-app
 npm install
 ```
 ### Step 3. Create the `.env` file  
