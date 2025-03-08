@@ -2,7 +2,7 @@
   <header
     class="bg-[#345b4f] text-[#f1f7ed] flex justify-between items-center p-4 text-xs md:text-base"
   >
-    <h1 class="text-lg lg:text-2xl">
+    <h1 class="text-lg lg:text-3xl font-black">
       <NuxtLink :to="{ name: 'index' }">Rezepte-App</NuxtLink>
     </h1>
     <nav>
