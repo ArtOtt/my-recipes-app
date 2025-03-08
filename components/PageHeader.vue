@@ -1,7 +1,7 @@
 <template>
-  <header class="max-w-fit py-2 border-b-2 border-sky-800">
-    <h2 class="text-black-400 text-2xl font-medium pt-1">{{ title }}</h2>
-    <p v-show="sub" class="text-lg text-gray-700 pt-3">{{ sub }}</p>
+  <header class="max-w-fit py-2">
+    <h2 class="text-black-400 font-black pt-1">{{ title }}</h2>
+    <p v-show="sub" class="text-gray-700 text-lg pt-3">{{ sub }}</p>
   </header>
 </template>
 

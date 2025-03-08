@@ -1,19 +1,27 @@
 <template>
-  <PageHeader :title="currentRecipe.name" :sub="currentRecipe.description" />
+  <PageHeader
+    class="text-6xl my-12 text-green-900"
+    :title="currentRecipe.name"
+    :sub="currentRecipe.description"
+  />
   <article class="py-5">
-    <img
-      class="rounded pb-4"
-      :src="currentRecipe.img"
-      alt=""
-      style="width: 400px"
-    />
-    <h3 class="pb-2">Zutaten:</h3>
-    <ul>
-      <li v-for="item in currentRecipe.ingredients" :key="item.name">
-        <strong>{{ item.name + ": " }}</strong>
-        {{ item.quantity }}
-      </li>
-    </ul>
+    <div class="flex gap-4 flex-col md:flex-row">
+      <img
+        class="rounded pb-4"
+        :src="currentRecipe.img"
+        alt=""
+        style="width: 400px"
+      />
+      <div>
+        <h3 class="pb-2 text-3xl font-black">Zutaten:</h3>
+        <ul>
+          <li v-for="item in currentRecipe.ingredients" :key="item.name">
+            <strong>{{ item.name + ": " }}</strong>
+            {{ item.quantity }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </article>
 
   <button
@@ -54,7 +62,7 @@ export default {
         this.currentRecipe.isFavorite = !this.currentRecipe.isFavorite;
 
         const response = await fetch(
-          `http://localhost:3010/recipes/${this.currentRecipe.id}`,
+          `https://24-mai-recipes.api.cbe.uber.space/recipes/${this.currentRecipe.id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },

@@ -1,11 +1,14 @@
 <template>
   <div class="p-6">
-    <PageHeader class="mt-10" title="Startseite" sub="Finde deine Kategorie" />
-    <ul class="space-y-2 m-4 w-max-50">
-      <li v-for="category in state.categories" :key="category.id" class="">
+    <PageHeader
+      class="mt-10 font-black text-3xl"
+      title="Finde deine Kategorie"
+    />
+    <ul class="gap-4 my-4 w-max-50 flex flex-wrap">
+      <li v-for="category in state.categories" :key="category.id">
         <NuxtLink
           :to="`category/${category.id}`"
-          class="px-4 py-2 bg-[#C2A83E] text-black rounded-lg w-[180px] shadow-md hover:bg-blue-500 transition duration-300 flex items-center gap-1"
+          class="text-white px-9 py-3 bg-[rgb(54,69,60)] rounded flex items-center gap-1 w-[210px]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +29,7 @@
         </NuxtLink>
       </li>
     </ul>
-    <PageHeader class="mt-10" title="Deine Favoriten" sub="" />
+    <PageHeader class="mt-10 font-black text-3xl" title="Deine Favoriten" />
     <recipe-teaser
       v-for="recipe of state.recipes.filter((recipe) => recipe.isFavorite)"
       :key="recipe.id"

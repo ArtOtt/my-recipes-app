@@ -1,5 +1,5 @@
 <template>
-  <PageHeader title="Rezeptübersicht" sub="Suche dir dein Rezept raus! " />
+  <PageHeader title="Rezeptübersicht" class="text-4xl m-6" />
   <RecipeTeaser
     v-for="recipe of state.recipes"
     :key="recipe.id"

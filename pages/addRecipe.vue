@@ -1,11 +1,11 @@
 <template>
-  <div class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
-    <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">
+  <div class="max-w-lg mx-auto p-6 bg-[#345b4f] shadow-md rounded-lg mt-5">
+    <h1 class="text-2xl font-bold text-center text-white mb-6">
       Neues Rezept hinzufügen
     </h1>
     <form @submit.prevent="addRecipe" class="space-y-4">
       <div class="space-y-2">
-        <label for="name" class="block text-gray-700 font-medium">Name:</label>
+        <label for="name" class="block text-white font-bold">Name:</label>
         <input
           v-model="recipe.name"
           id="name"
@@ -16,7 +16,7 @@
       </div>
 
       <div class="space-y-2">
-        <label class="block text-gray-700 font-medium">Kategorie:</label>
+        <label class="block text-white font-bold">Kategorie:</label>
         <div class="space-y-2">
           <div
             v-for="category in categories"
@@ -31,7 +31,7 @@
               class="focus:ring-blue-500 text-blue-600"
               required
             />
-            <label :for="category.id" class="text-gray-700 cursor-pointer">{{
+            <label :for="category.id" class="text-white cursor-pointer">{{
               category.title
             }}</label>
           </div>
@@ -39,7 +39,7 @@
       </div>
 
       <div class="space-y-2">
-        <label for="description" class="block text-gray-700 font-medium"
+        <label for="description" class="block text-white font-bold"
           >Beschreibung:</label
         >
         <textarea
@@ -52,9 +52,7 @@
       </div>
 
       <div class="space-y-2">
-        <label for="img" class="block text-gray-700 font-medium"
-          >Bild-URL:</label
-        >
+        <label for="img" class="block text-white font-bold">Bild-URL:</label>
         <input
           v-model="recipe.img"
           id="img"
@@ -71,13 +69,13 @@
           id="isFavorite"
           class="focus:ring-blue-500 text-blue-600"
         />
-        <label for="isFavorite" class="text-gray-700"
+        <label for="isFavorite" class="text-white font-bold"
           >Als Favorit markieren</label
         >
       </div>
 
       <div>
-        <h3 class="text-lg font-medium text-gray-800">Zutaten</h3>
+        <h3 class="text-lg font-bold text-white">Zutaten</h3>
         <div
           v-for="(ingredient, index) in recipe.ingredients"
           :key="index"
@@ -152,7 +150,7 @@ export default {
     },
     async addRecipe() {
       try {
-        const apiUrl = "https://example.com/api/recipes";
+        const apiUrl = "https://24-mai-recipes.api.cbe.uber.space/recipes";
         const response = await fetch(apiUrl, {
           method: "POST",
           headers: {
