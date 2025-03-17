@@ -19,7 +19,7 @@ This is the final project to apply the knowledge gained from the Coding Bootcamp
 ### Step 1. Clone the repository  
 Run the following command to clone the repository:  
 ```sh
-git clone git@github.com:coding-bootcamps-eu/recipes-app recipes-app
+git clone git@github.com:ArtOtt/my-recipes-app.git recipes-app
 ```
 
 ### Step 2. Install dependencies  
