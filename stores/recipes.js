@@ -2,10 +2,10 @@ export const useRecipesStore = defineStore("recipes", {
   state() {
     return {
       user: null,
-      test: "Hallo Universum",
+
       categories: null,
       recipes: [],
-      apiURl: import.meta.env.VITE_API_URL,
+      apiURl: import.meta.env.MONGODB_URI,
     };
   },
   getters: {
@@ -33,7 +33,7 @@ export const useRecipesStore = defineStore("recipes", {
       this.user = JSON.parse(localStorage.getItem("user"));
     },
     async getAllRecipes() {
-      const res = await fetch(this.apiURl + "recipes");
+      const res = await fetch(this.apiURl + "../api/recipes");
       this.recipes = await res.json();
     },
     async getAllCategories() {
