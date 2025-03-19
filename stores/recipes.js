@@ -2,15 +2,19 @@ export const useRecipesStore = defineStore("recipes", {
   state() {
     return {
       user: null,
+      config: useRuntimeConfig(),
 
       categories: null,
       recipes: [],
-      apiURl: import.meta.env.MONGODB_URI,
     };
   },
   getters: {
     isLoggedIn() {
       return this.user !== null;
+    },
+
+    apiURL() {
+      return this.config.public.apiURL;
     },
   },
 
@@ -33,11 +37,12 @@ export const useRecipesStore = defineStore("recipes", {
       this.user = JSON.parse(localStorage.getItem("user"));
     },
     async getAllRecipes() {
-      const res = await fetch(this.apiURl + "../api/recipes");
+      console.log("API URL:", this.apiURL);
+      const res = await fetch(this.apiURL + "/api/recipes");
       this.recipes = await res.json();
     },
     async getAllCategories() {
-      const res = await fetch(this.apiURl + "categories");
+      const res = await fetch(this.apiURL + "/api/category");
       this.categories = await res.json();
     },
     logout() {

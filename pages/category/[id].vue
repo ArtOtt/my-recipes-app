@@ -18,6 +18,7 @@ export default {
       recipesFromCategory: {},
       recipeId: this.$route.params.id,
       state: useRecipesStore(),
+      config: useRuntimeConfig(),
     };
   },
 
@@ -25,14 +26,14 @@ export default {
     categoryId() {
       return this.$route.params.id;
     },
+    apiURL() {
+      return this.config.public.apiURL;
+    },
   },
 
   methods: {
     async getAllCategoryRecipes() {
-      const res = await fetch(
-        import.meta.env.VITE_API_URL +
-          `categories/${this.categoryId}?_embed=recipes`
-      );
+      const res = await fetch(this.apiURL + `/api/category/${this.categoryId}`);
       this.recipesFromCategory = await res.json();
     },
   },

@@ -7,7 +7,7 @@
     <ul class="gap-4 my-4 w-max-50 flex flex-wrap">
       <li v-for="category in state.categories" :key="category.id">
         <NuxtLink
-          :to="`category/${category.id}`"
+          :to="`category/${category._id}`"
           class="text-white px-9 py-3 bg-[rgb(54,69,60)] rounded flex items-center gap-1 w-[210px]"
         >
           <svg
