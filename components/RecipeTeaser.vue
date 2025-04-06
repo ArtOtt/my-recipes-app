@@ -24,8 +24,8 @@
         </p>
 
         <NuxtLink
-          class="text-xl bg-sky-500 text-white px-9 py-3 bg-green-900 rounded"
-          :to="`singleRecipe/${recipe.id}`"
+          class="text-xl bg-sky-500 text-white px-9 py-3 rounded"
+          :to="`singleRecipe/${recipe._id}`"
         >
           Zum Rezept
         </NuxtLink>

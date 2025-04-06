@@ -15,10 +15,12 @@ import { useRecipesStore } from "@/stores/recipes";
 export default {
   data() {
     return {
-      recipesFromCategory: {},
-      recipeId: this.$route.params.id,
+      category: {},
+      recipesFromCategory: [],
+
       state: useRecipesStore(),
       config: useRuntimeConfig(),
+      categoryId: this.$route.params.id,
     };
   },
 
@@ -31,15 +33,12 @@ export default {
     },
   },
 
-  methods: {
-    async getAllCategoryRecipes() {
-      const res = await fetch(this.apiURL + `/api/category/${this.categoryId}`);
-      this.recipesFromCategory = await res.json();
-    },
-  },
   async created() {
-    await this.getAllCategoryRecipes();
-    console.log(this.recipesFromCategory);
+    this.recipesFromCategory = await this.state.getRecipesByCategory(
+      this.categoryId
+    );
+    this.category = await this.state.getCategoryById(this.categoryId);
+    console.log(this.category.title);
   },
 
   components: { RecipeTeaser },

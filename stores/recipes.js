@@ -49,5 +49,19 @@ export const useRecipesStore = defineStore("recipes", {
       this.user = null;
       localStorage.setItem("user", null);
     },
+    async getCategoryById(id) {
+      const res = await fetch(this.apiURL + `/api/category/${id}`);
+      return await res.json();
+    },
+    async getRecipeById(id) {
+      const res = await fetch(this.apiURL + `/api/recipes/${id}`);
+      return await res.json();
+    },
+    async getRecipesByCategory(categoryId) {
+      const res = await fetch(
+        this.apiURL + `/api/recipes?categoryId=${categoryId}`
+      );
+      return await res.json();
+    },
   },
 });
